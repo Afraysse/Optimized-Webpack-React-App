@@ -1,23 +1,38 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Header, Container, Divider, Icon } from "semantic-ui-react";
+import {
+  Header,
+  Container,
+  Grid,
+  Divider,
+  Segment,
+  Icon
+} from "semantic-ui-react";
 
 import { pullRight, h1 } from "./layout.css";
 
 const Layout = ({ children }) => {
   return (
-    <Container>
-      <Link to="/">
-        <Header as="h1" className={h1}>
-          Annie Fraysse
-        </Header>
-      </Link>
-      {children}
-      <Divider />
-      <p className={pullRight}>
-        Made with <Icon name="heart" color="red" />
-      </p>
-    </Container>
+    <Fragment>
+      <Segment>
+        <Grid>
+          <Grid.Row>
+            <Link to="/">
+              <Header as="h3" className={h1}>
+                Annie Fraysse
+              </Header>
+            </Link>
+          </Grid.Row>
+        </Grid>
+      </Segment>
+      <Container>
+        {children}
+        <Divider />
+        <p style={{ textAlign: "right" }}>
+          Made with <Icon name="heart" color="red" /> By Annie Fraysse
+        </p>
+      </Container>
+    </Fragment>
   );
 };
 
