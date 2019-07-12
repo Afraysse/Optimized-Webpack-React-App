@@ -11,21 +11,28 @@ import {
 
 import { pullRight, h1 } from "./layout.css";
 
+// const Header = () => {
+//   return (
+//     <Segment>
+//       <Grid>
+//         <Grid.Row>
+//           <Link to="/">
+//             <Header as="h3" className={h1}>
+//               Annie Fraysse
+//             </Header>
+//           </Link>
+//         </Grid.Row>
+//       </Grid>
+//     </Segment>
+//   );
+// };
+//
+// export default Header;
+
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <Segment>
-        <Grid>
-          <Grid.Row>
-            <Link to="/">
-              <Header as="h3" className={h1}>
-                Annie Fraysse
-              </Header>
-            </Link>
-          </Grid.Row>
-        </Grid>
-      </Segment>
-      <Container>
+      <Container style={{ width: "100%" }}>
         {children}
         <Divider />
         <p style={{ textAlign: "right" }}>

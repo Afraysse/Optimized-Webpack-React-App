@@ -5,6 +5,7 @@ import importedComponent from "react-imported-component";
 import Home from "../Home";
 import Loading from "../Loading";
 import LoginPage from "../Login";
+import DashboardPage from "../Dashboard";
 
 /*
 Code split to improve load times -
@@ -36,6 +37,7 @@ const App = () => {
       <div>
         <Switch>
           <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/" component={Home} />
           <Route exact path="/dynamic" component={AsyncDynamicPage} />
           <Route component={AsyncNoMatch} />
