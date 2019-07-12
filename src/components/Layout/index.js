@@ -32,7 +32,7 @@ import { pullRight, h1 } from "./layout.css";
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <Container style={{ width: "100%" }}>
+      <Container style={{ width: "100%", marginTop: "3em" }}>
         {children}
         <Divider />
         <p style={{ textAlign: "right" }}>
