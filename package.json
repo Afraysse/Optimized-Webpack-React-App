@@ -9,6 +9,10 @@
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js"
   },
   "dependencies": {
+    "anymatch": "^3.0.3",
+    "braces": "^3.0.2",
+    "chokidar": "^3.0.2",
+    "micromatch": "^4.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-delay-render": "^0.1.2",

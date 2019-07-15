@@ -6,7 +6,9 @@ import {
   Grid,
   Divider,
   Segment,
-  Icon
+  Icon,
+  Menu,
+  Dropdown
 } from "semantic-ui-react";
 
 import { pullRight, h1 } from "./layout.css";
@@ -29,10 +31,32 @@ import { pullRight, h1 } from "./layout.css";
 //
 // export default Header;
 
+const NavBar = () => {
+  return (
+    <Menu attched="top" inverted borderless style={{ height: "5em" }}>
+      <Menu.Menu position="left">
+        <Menu.Item>What up</Menu.Item>
+        <Menu.Item>Hi </Menu.Item>
+      </Menu.Menu>
+      <Menu.Menu position="right">
+        <Menu.Item>
+          <Dropdown text="Options" style={{ paddingRight: "2em" }}>
+            <Dropdown.Menu>
+              <Dropdown.Item>Log Out</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu.Item>
+      </Menu.Menu>
+    </Menu>
+  );
+};
+
 const Layout = ({ children }) => {
   return (
     <Fragment>
-      <Container style={{ width: "100%", marginTop: "3em" }}>
+      <Container text style={{ marginTop: "2em" }} />
+      <NavBar />
+      <Container style={{ width: "100%", marginTop: "2em" }}>
         {children}
         <Divider />
         <p style={{ textAlign: "right" }}>
